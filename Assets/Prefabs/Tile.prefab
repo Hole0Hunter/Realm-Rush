@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 134811222185647708}
   - component: {fileID: 862910011440638365}
   - component: {fileID: 1708027412439933749}
-  - component: {fileID: 6573718349428189587}
+  - component: {fileID: 2337500209602969927}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5917565397703359468}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -252,7 +252,7 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
---- !u!114 &6573718349428189587
+--- !u!114 &2337500209602969927
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,6 +264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57a44baa9f12d5a4186c875a1f6e62a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  blockedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   coordinates: {x: 0, y: 0}
 --- !u!1 &6434885756490794086
 GameObject:
@@ -311,6 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb4ffa615d98159438edd1e47d7056b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 3219458064393657486, guid: 38c7d2faf64c80243887a5741935d84a, type: 3}
   isPlaceable: 1
 --- !u!65 &3662597901594950873
 BoxCollider:

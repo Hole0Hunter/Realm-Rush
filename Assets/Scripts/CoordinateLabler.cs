@@ -7,13 +7,24 @@ using System;
 [ExecuteAlways] // This tag will make sure that the script is executed even in the Scene View.
 public class CoordinateLabler : MonoBehaviour
 {
+    [SerializeField] Color defaultColor = Color.white;
+    [SerializeField] Color blockedColor = Color.gray;
+
     TextMeshPro label;
     public Vector2Int coordinates = new Vector2Int();
-
-    // Start is called before the first frame update
+    Waypoint waypoint;
+    
     void Awake()
     {
         label = this.GetComponent<TextMeshPro>();
+        waypoint = GetComponentInParent<Waypoint>();
+        label.enabled = true;
+    }
+
+    // Start is called before the first frame update
+    private void Start()
+    {
+        label.enabled = false;
     }
 
     // Update is called once per frame
@@ -21,6 +32,8 @@ public class CoordinateLabler : MonoBehaviour
     {
         DisplayCoordinates();
         UpdateObjectName();
+        ColorCordinates();
+        ToggleLables();
     }
 
     void DisplayCoordinates()
@@ -37,5 +50,25 @@ public class CoordinateLabler : MonoBehaviour
     void UpdateObjectName()
     {
         transform.parent.name = coordinates.ToString();
+    }
+
+    void ColorCordinates()
+    {
+        if (waypoint.IsPlaceable)
+        {
+            label.color = defaultColor;
+        }
+        else
+        {
+            label.color = blockedColor;
+        }
+    }
+
+    void ToggleLables()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            label.enabled = !label.IsActive();
+        }
     }
 }
