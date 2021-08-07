@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System;
 
+[RequireComponent(typeof(TextMeshPro))]
 [ExecuteAlways] // This tag will make sure that the script is executed even in the Scene View.
 public class CoordinateLabler : MonoBehaviour
 {
@@ -30,9 +31,13 @@ public class CoordinateLabler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DisplayCoordinates();
-        UpdateObjectName();
-        ColorCordinates();
+        if (!Application.isPlaying)
+        {
+            label.enabled = true;
+            DisplayCoordinates();
+            UpdateObjectName();
+        }
+        SetLabelColor();
         ToggleLables();
     }
 
@@ -52,7 +57,7 @@ public class CoordinateLabler : MonoBehaviour
         transform.parent.name = coordinates.ToString();
     }
 
-    void ColorCordinates()
+    void SetLabelColor()
     {
         if (waypoint.IsPlaceable)
         {
