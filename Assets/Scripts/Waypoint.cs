@@ -6,7 +6,7 @@ using UnityEngine;
    and we need to access the name of the tiles, when we click on the respective tile.       */
 public class Waypoint : MonoBehaviour
 {
-    [SerializeField] GameObject towerPrefab;
+    [SerializeField] Tower towerPrefab;
     [SerializeField] bool isPlaceable;
     public bool IsPlaceable {get { return isPlaceable; } }
     
@@ -15,8 +15,8 @@ public class Waypoint : MonoBehaviour
         if (isPlaceable)
         {
             Vector3 tilePos = this.transform.position;
-            Instantiate(towerPrefab, tilePos, Quaternion.identity);
-            isPlaceable = false;
+            bool isPlaced = towerPrefab.CreateTower(towerPrefab, tilePos);
+            isPlaceable = !isPlaced;
         }
     }
 }

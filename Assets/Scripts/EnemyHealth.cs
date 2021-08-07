@@ -7,8 +7,14 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int maxHP = 5;
     [SerializeField] int currHP;
+
+    Enemy enemy;
     // Start is called before the first frame update
     void Start()
+    {
+        enemy = GetComponent<Enemy>();
+    }
+    void OnEnable()
     {
         currHP = maxHP;
     }
@@ -29,7 +35,8 @@ public class EnemyHealth : MonoBehaviour
         currHP--;
         if (currHP <= 0)
         {
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
+            enemy.RewardGold();
         }
     }
 }

@@ -90,9 +90,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5672325927823913723}
-  - component: {fileID: 1962170220}
   - component: {fileID: 5364049520302403672}
+  - component: {fileID: 1962170220}
   - component: {fileID: -4841915301688109936}
+  - component: {fileID: 7365987184255720787}
   m_Layer: 0
   m_Name: Ram
   m_TagString: Untagged
@@ -115,6 +116,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5364049520302403672
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5040643765344069697}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4, z: 4}
+  m_Center: {x: 0, y: 2.5, z: 0}
 --- !u!114 &1962170220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,19 +150,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   speed: 1
---- !u!65 &5364049520302403672
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5040643765344069697}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4, y: 4, z: 4}
-  m_Center: {x: 0, y: 2.5, z: 0}
 --- !u!114 &-4841915301688109936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +162,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8d25dc22ff24984db534b3361bd28eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHP: 5
+  currHP: 0
+--- !u!114 &7365987184255720787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5040643765344069697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9245787e44313a43a297f040943cfff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldReward: 25
+  goldPenalty: 10
