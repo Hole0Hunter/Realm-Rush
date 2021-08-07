@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c123242ace63a489542b9c471b6f5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerRange: 15
+  towerRange: 25
   projectileParticles: {fileID: 1496277797515837327}
 --- !u!114 &-2487447980604161444
 MonoBehaviour:
@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4255751e6376741be7c6aa0d6ddea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 50
 --- !u!1 &6131056645070147807
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +248,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -257,7 +258,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 1.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1007,7 +1008,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.75
       minScalar: 10
       maxCurve:
         serializedVersion: 2

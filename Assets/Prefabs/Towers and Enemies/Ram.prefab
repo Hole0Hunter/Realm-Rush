@@ -149,7 +149,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  speed: 1
+  speed: 0.5
 --- !u!114 &-4841915301688109936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8d25dc22ff24984db534b3361bd28eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 5
+  maxHP: 3
+  difficultyRamp: 2
   currHP: 0
 --- !u!114 &7365987184255720787
 MonoBehaviour:
@@ -177,4 +178,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldReward: 25
-  goldPenalty: 10
+  goldPenalty: 25

@@ -9,7 +9,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] int maxHP = 5;
     [Tooltip("Adds this amount to maxHP when the enemy dies, so that the game becomes difficult")]
     [SerializeField] int difficultyRamp = 1;
-    [SerializeField] int currHP;
+    int currHP;
 
     Enemy enemy;
     // Start is called before the first frame update
